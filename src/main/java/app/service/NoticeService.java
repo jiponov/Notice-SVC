@@ -42,9 +42,10 @@ public class NoticeService {
 
     public ByteArrayResource generateNoticeFile(UUID gameId, UUID userId) {
 
+        //  всеки USER ще получава само своя собствен NOTICE
         Notice notice = noticeRepository
-                .findByGameId(gameId)
-                .orElseThrow(() -> new RuntimeException("No notice found for gameId: " + gameId));
+                .findByGameIdAndUserId(gameId, userId)
+                .orElseThrow(() -> new RuntimeException("No notice found for gameId: " + gameId + " and userId: " + userId));
 
         if (!notice.getUserId().equals(userId)) {
             throw new RuntimeException("User does not have permission to download this notice.");

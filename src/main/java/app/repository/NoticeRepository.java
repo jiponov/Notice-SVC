@@ -8,8 +8,10 @@ import java.util.*;
 
 @Repository
 public interface NoticeRepository extends JpaRepository<Notice, UUID> {
+
+    Optional<Notice> findByGameIdAndUserId(UUID gameId, UUID userId);
+
     List<Notice> findByUserId(UUID userId);
-    Optional<Notice> findByGameId(UUID gameId);
 
 
 }

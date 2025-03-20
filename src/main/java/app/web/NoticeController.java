@@ -36,6 +36,10 @@ public class NoticeController {
 
         Resource file = noticeService.generateNoticeFile(gameId, userId);
 
+        if (file == null) {
+            return ResponseEntity.notFound().build();
+        }
+
         ResponseEntity<Resource> resource = ResponseEntity
                 .status(HttpStatus.OK)
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=game-purchase.txt")
