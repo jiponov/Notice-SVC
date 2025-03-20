@@ -2,11 +2,11 @@
 📄 Notice SVC is a microservice responsible for handling notifications and generating license certificates for purchased games. It communicates with the main **Jubbisoft Games Store** application through REST APIs.
 
 ⚠️ **Project Integration**
-This microservice is part of **Jubbisoft Games Store**.
+This microservice is part of Jubbisoft Games Store.
 
 ## All Projects 🔗
-- [Jubbisoft Games Store (Main Application) link] https://github.com/jiponov/Jubbisoft-Games-Store
-- [Notice SVC (Microservice) link] https://github.com/jiponov/Notice-SVC
+- `[Jubbisoft Games Store (Main Application) link]`  https://github.com/jiponov/Jubbisoft-Games-Store
+- `[Notice SVC (Microservice) link]`  https://github.com/jiponov/Notice-SVC
 
 ## API Endpoints 🔗
 - `GET /notices/download/{gameId}/{userId}` → Download license file.
