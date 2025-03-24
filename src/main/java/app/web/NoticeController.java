@@ -22,17 +22,18 @@ public class NoticeController {
         this.noticeService = noticeService;
     }
 
+
     // TEST
     @GetMapping("/test")
     public ResponseEntity<String> getHelloWorld(@RequestParam(name = "name") String name) {
-
+        //throw new RuntimeException();
         return ResponseEntity.ok("Hello, " + name + " user!");
     }
 
 
     // /api/v1/notices/download/{gameId}/{userId}
     @GetMapping("/download/{gameId}/{userId}")
-    public ResponseEntity<Resource> downloadNotice(@RequestParam(name = "gameId") UUID gameId,@RequestParam(name = "userId") UUID userId) {
+    public ResponseEntity<Resource> downloadNotice(@RequestParam(name = "gameId") UUID gameId, @RequestParam(name = "userId") UUID userId) {
 
         Resource file = noticeService.generateNoticeFile(gameId, userId);
 
