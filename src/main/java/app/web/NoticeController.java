@@ -26,7 +26,7 @@ public class NoticeController {
     // TEST
     @GetMapping("/test")
     public ResponseEntity<String> getHelloWorld(@RequestParam(name = "name") String name) {
-        //throw new RuntimeException();
+        // throw new RuntimeException();
         return ResponseEntity.ok("Hello, " + name + " user!");
     }
 

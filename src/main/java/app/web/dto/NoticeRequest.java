@@ -5,6 +5,8 @@ import lombok.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
+@NoArgsConstructor
 @Builder
 @Data
 public class NoticeRequest {
