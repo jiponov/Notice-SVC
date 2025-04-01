@@ -23,7 +23,7 @@ public class NoticeController {
     }
 
 
-    // TEST
+    // TEST only
     @GetMapping("/test")
     public ResponseEntity<String> getHelloWorld(@RequestParam(name = "name") String name) {
         // throw new RuntimeException();

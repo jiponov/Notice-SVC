@@ -27,6 +27,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 
+
 @WebMvcTest(NoticeController.class)
 public class NoticeControllerApiTest {
 
@@ -35,6 +36,7 @@ public class NoticeControllerApiTest {
 
     @Autowired
     private MockMvc mockMvc;
+
 
     // GET /api/v1/notices/test?name=...
     @Test
@@ -67,7 +69,6 @@ public class NoticeControllerApiTest {
     }
 
 
-
     @Test
     void downloadNotice_fileNotFound_shouldReturn404() throws Exception {
         UUID gameId = UUID.randomUUID();
@@ -80,6 +81,7 @@ public class NoticeControllerApiTest {
                         .param("userId", userId.toString()))
                 .andExpect(status().isNotFound());
     }
+
 
     @Test
     void createNotice_withValidRequest_shouldReturnCreatedNotice() throws Exception {

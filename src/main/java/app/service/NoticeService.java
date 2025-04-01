@@ -84,7 +84,6 @@ public class NoticeService {
     }
 
 
-
     public List<NoticeResponse> getNoticesByUserId(UUID userId) {
 
         List<NoticeResponse> responsesList = noticeRepository

@@ -148,6 +148,7 @@ public class NoticeServiceUTest {
         assertTrue(content.contains("lubo"));
     }
 
+
     // generateNoticeFile()
     // Няма Notice – хвърля RuntimeException
     @Test
@@ -162,6 +163,7 @@ public class NoticeServiceUTest {
 
         assertTrue(ex.getMessage().contains("No notice found"));
     }
+
 
     // generateNoticeFile()
     // Notice.userId различен от подадения → грешка
@@ -235,6 +237,7 @@ public class NoticeServiceUTest {
         assertEquals("Game 2", result.get(1).getTitle());
         verify(noticeRepository).findByUserId(userId);
     }
+
 
     // getNoticesByUserId()
     // Потребител няма никакви notices → връща празен списък
